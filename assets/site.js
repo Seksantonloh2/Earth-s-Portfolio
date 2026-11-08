@@ -19,12 +19,17 @@ $$('.cu').forEach(el=>cio.observe(el));
 function fit(){$$('.fit').forEach(el=>{el.style.fontSize='';const cs=getComputedStyle(el);const pad=parseFloat(cs.paddingLeft)+parseFloat(cs.paddingRight);const avail=el.clientWidth-pad;let fs=parseFloat(cs.fontSize),n=0;while(el.scrollWidth-pad>avail+1&&n++<40){fs*=.96;el.style.fontSize=fs+'px'}})}
 fit();addEventListener('resize',fit);(document.fonts&&document.fonts.ready||Promise.resolve()).then(fit);
 
-/* menu */
+/* menu: the list is moved to <body> and positioned under the button so no panel can clip it */
 const menu=$('.menu');
-if(menu){const b=menu.querySelector('.menu-btn');
-  b.addEventListener('click',e=>{e.stopPropagation();const o=menu.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-  document.addEventListener('click',e=>{if(!menu.contains(e.target)){menu.classList.remove('open');b.setAttribute('aria-expanded','false')}});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+if(menu){const b=menu.querySelector('.menu-btn'),list=menu.querySelector('.menu-list');
+  if(list)document.body.appendChild(list);
+  const place=()=>{const r=b.getBoundingClientRect();list.style.top=(r.bottom+10)+'px';list.style.right=Math.max(12,innerWidth-r.right)+'px'};
+  const set=o=>{if(o)place();list.classList.toggle('show',o);menu.classList.toggle('open',o);b.setAttribute('aria-expanded',o)};
+  b.addEventListener('click',e=>{e.stopPropagation();set(!list.classList.contains('show'))});
+  list.addEventListener('click',e=>e.stopPropagation());
+  document.addEventListener('click',()=>set(false));
+  addEventListener('resize',()=>{if(list.classList.contains('show'))place()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
 }
 
 /* page transitions: blur out before going to another page (same-page # links only scroll) */
