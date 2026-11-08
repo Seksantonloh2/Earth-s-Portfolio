@@ -83,7 +83,7 @@ if(form){
     ['name','contact','detail'].forEach(n=>{const f=form.elements[n],w=f.closest('.field');const bad=!f.value.trim();w.classList.toggle('bad',bad);if(bad)ok=false});
     if(!ok){form.querySelector('.bad input,.bad textarea').focus();return}
     const v=n=>form.elements[n].value.trim();
-    const msg=`สวัสดีครับ/ค่ะ คุณ Tanachok\n\nชื่อ: ${v('name')}\nแบรนด์: ${v('brand')||'-'}\nติดต่อกลับ: ${v('contact')}\nประเภทงาน: ${kind||'-'}\n\nรายละเอียด:\n${v('detail')}`;
+    const msg=`สวัสดีครับ/ค่ะ คุณ Tanachot\n\nชื่อ: ${v('name')}\nแบรนด์: ${v('brand')||'-'}\nติดต่อกลับ: ${v('contact')}\nประเภทงาน: ${kind||'-'}\n\nรายละเอียด:\n${v('detail')}`;
     $('#msg').textContent=msg;form.hidden=true;$('#done').classList.add('on');
     $('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(msg);document.querySelectorAll('#copy .roll span').forEach(s=>s.textContent='คัดลอกแล้ว ✓')}catch(err){}};
   });

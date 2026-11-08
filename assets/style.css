@@ -1,4 +1,4 @@
-/* Tanachok Aunpak — portfolio
+/* Tanachot Aunpak — portfolio
    Style: Guidy-inspired. Barlow Condensed italic display, Kanit italic for Thai display,
    Switzer + Anuphan body. Grey page, framed panels, one accent. */
 :root{
@@ -317,3 +317,33 @@ body.leaving main{opacity:0;filter:blur(12px);transform:translateY(-10px)}
 .ways div:first-child,.ways a:first-child{border-top:1px solid var(--line)}
 .ways a:hover{color:var(--accent,#F20202);padding-left:10px}
 .ways a span{word-break:break-all}
+
+/* ===== White, clean, minimal theme ===== */
+:root{--page:#FFFFFF;--soft:#F6F6F6;--line:#ECECEC;--grey:#8A8A8A;--gap:12px;--r:20px}
+body{background:#fff}
+.panel{background:#fff;border:1px solid var(--line)}
+.glow{display:none}
+/* dark blocks become light */
+.dark{background:var(--soft);color:var(--ink);border-color:transparent}
+.dark .grey,.dark .num,.dark .dl dt{color:var(--grey)}
+.dark .srow,.dark .dl div{border-color:var(--line)}
+.card.dark .go b{background:#fff}
+.card:hover,.card.dark:hover{background:#FAFAFA}
+/* soft fills for chips, rows, inputs */
+.chip,.btn.ghost,.card .go b,.menu-list a:hover,.menu-list a[aria-current="page"],.done,.field input,.field textarea{background:var(--soft)}
+.chip:hover{background:#EDEDED}
+.btn.light{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.menu-btn{border:1px solid var(--line)}
+.menu-list{border:1px solid var(--line);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.tile{border:1px solid var(--line)}
+.tile .im,.strip a,.feature .im,.card .vis .f{background:var(--soft)}
+.card .vis .f{box-shadow:0 10px 24px rgba(0,0,0,.08)}
+.hero{background:#fff;border-color:var(--line)}
+.logo{color:var(--ink)}
+.roles span{color:var(--ink)}
+.roles span em{color:var(--grey)}
+.vlines i,.vlines i:last-child{border-color:rgba(0,0,0,.04)}
+.crumb{color:var(--grey)}.crumb a:hover{color:var(--ink)}
+.foot-panel{background:var(--soft)}
+.foot-panel .row{color:var(--grey)}.foot-panel nav a:hover{color:var(--ink)}
+.phead{background:#fff;border-color:var(--line)}
