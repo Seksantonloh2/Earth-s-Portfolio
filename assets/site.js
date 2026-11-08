@@ -48,6 +48,7 @@ if(tiles.length&&$('.filters')){
   $$('.chip[data-type]').forEach(c=>c.addEventListener('click',()=>{type=c.dataset.type;$$('.chip[data-type]').forEach(x=>x.setAttribute('aria-pressed',x===c));apply()}));
   const q=new URLSearchParams(location.search).get('brand')||location.hash.slice(1);
   const pre=q&&$(`.chip[data-brand="${q}"]`);if(pre)pre.click();else apply();
+  addEventListener('hashchange',()=>{const c=$(`.chip[data-brand="${location.hash.slice(1)}"]`);if(c){c.click();$('.filters').scrollIntoView({behavior:reduce?'auto':'smooth'})}});
 }
 
 /* lightbox */

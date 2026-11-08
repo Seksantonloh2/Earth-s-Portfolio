@@ -8,8 +8,9 @@ Static site, no build step. Open `index.html` in a browser, or serve the folder 
 - `index.html` — home
 - `work.html` — all 37 graphic pieces with brand/type filters and a lightbox
 - `eitanic.html`, `sesante.html`, `tinted.html`, `phuriphat.html` — case studies
-- `video.html` — 17 videos (play on Google Drive)
-- `about.html` — services, process, KOFICE award
+- `video.html` — 24 videos (Google Drive and YouTube) plus TikTok / Facebook Reels links
+- `photo.html` — 22 photos from QEO Gallery Photo (fashion, street, product, wedding, portrait, concert, live streaming)
+- `about.html` — bio, work experience, services, tools, process, awards
 - `contact.html` — brief form (builds a message to copy; no server yet)
 
 ## Structure
