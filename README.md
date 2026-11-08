@@ -1,6 +1,6 @@
-# Earth's Portfolio
+# Qeover — Earth's Portfolio
 
-Portfolio website for **Tanachok Aunpak** — graphic designer and video creator (Thai).
+**Qeover** — portfolio website for **Tanachok Aunpak** — graphic designer and video creator (Thai).
 
 Static site, no build step. Open `index.html` in a browser, or serve the folder with any static host (e.g. GitHub Pages).
 

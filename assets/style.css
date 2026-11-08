@@ -85,7 +85,7 @@ body.leaving main{opacity:0;filter:blur(12px);transform:translateY(-10px)}
 .roles{position:absolute;left:var(--pad);top:132px;display:grid;gap:6px}
 .roles span{display:flex;gap:14px;font:500 18px/1.3 var(--body);letter-spacing:-.02em;color:rgba(255,255,255,.85)}
 .roles span em{font-style:normal;color:rgba(255,255,255,.4);font-weight:400;font-size:14px;width:34px}
-.hero h1{position:relative;z-index:1;padding:0 clamp(16px,2vw,24px);font-size:clamp(96px,15.6vw,260px);text-align:right;white-space:nowrap}
+.hero h1{position:relative;z-index:1;padding:0 clamp(16px,2vw,24px);font-size:clamp(96px,23vw,420px);text-align:right;white-space:nowrap}
 .hero .foot{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding:28px var(--pad) var(--pad)}
 .hero .foot p{max-width:520px}
 
