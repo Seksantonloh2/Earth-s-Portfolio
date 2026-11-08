@@ -313,5 +313,7 @@ body.leaving main{opacity:0;filter:blur(12px);transform:translateY(-10px)}
 @media (max-width:1100px){.vgrid{columns:3}}
 @media (max-width:760px){.vgrid{columns:2}.vfeat{grid-template-columns:1fr}.play{width:46px;height:46px;margin:-23px 0 0 -23px}}
 @media (max-width:420px){.vgrid{columns:1}}
-.ways div{background:none;border-radius:0;border-bottom:1px solid var(--line);padding:18px 2px;min-height:58px}
-.ways div:first-child{border-top:1px solid var(--line)}
+.ways div,.ways a{background:none;border-radius:0;border-bottom:1px solid var(--line);padding:18px 2px;min-height:58px;transition:color .3s,padding .3s}
+.ways div:first-child,.ways a:first-child{border-top:1px solid var(--line)}
+.ways a:hover{color:var(--accent,#F20202);padding-left:10px}
+.ways a span{word-break:break-all}
